@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <hr>
+        <h1>{{ greet('afternoon') }}</h1>
+        <p>{{ name }}</p>
+        <p>Job: {{ job }}</p>
+        <hr>
+        <h1>Data Binding</h1>
+        <a v-bind:href='website'>Google</a>
+        <input type="text" v-bind:value="name">
+        <hr>
+        <h1>Events</h1>
+        <button v-on:click="addYear()">Add a Year</button>
+        <button v-on:click="reduceYear()">Subtract a Year</button>
+        <button v-on:dblclick="this.alert('Test')">Testar aviso</button>
+        <p>My age is {{age}}</p>
+        <hr>
+        <h1>Events Modifiers</h1>
+        <button v-on:click.once="addYear()">Add a Year</button>
+        <button v-on:click="reduceYear()">Subtract a Year</button>
+        <button v-on:dblclick="this.alert('Test')">Testar aviso</button>
+        <p>My age is {{age}}</p>
+        <hr>
+        <h1>Two-way Binding</h1>
+        <label>Name</label>
+        <input type="text" v-model='name'>
+        <p>{{name}}</p>
+        <label>Age</label>
+        <input type="text" v-model='age'>
+        <p>{{age}}</p>
+        <hr>
+        <h1>Computed Properties</h1>
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <p>A - {{a}}</p>
+        <p>B - {{b}}</p>
+        <p>Age + A = {{addToA}}</p>
+        <p>Age + B = {{addToB}}</p>
+        <hr>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS</title>
+</head>
+<body>
+    <div id="vue-app">
+        <h1>Lopping through lists</h1>
+        <ul>
+            <div v-for="char in chars">
+                {{char}}
+            </div>
+        </ul>
+
+        <template v-for="(ninja, index ) in ninjas">
+            {{index}}. {{ninja.name}} - {{ninja.age}}
+        </template>
+
+        <template v-for="ninja in ninjas">
+            <div v-for="(val.key) in ninja"">
+                {{key}} - {{value}}
+            </div>
+        </template>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</html>
